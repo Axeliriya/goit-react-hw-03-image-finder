@@ -1,4 +1,5 @@
 import './styles.css';
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import getFetch from './components/services/service-api';
 import Container from './components/Container';
@@ -104,5 +105,12 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  searchQuery: PropTypes.string,
+  error: PropTypes.string,
+  showModal: PropTypes.bool,
+  currentPage: PropTypes.number,
+};
 
 export default App;

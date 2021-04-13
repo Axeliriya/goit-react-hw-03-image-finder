@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Load from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
@@ -10,6 +11,10 @@ const Button = ({ onClick, loading }) => {
       </button>
     </div>
   );
+};
+
+Button.propTypes = {
+  loading: PropTypes.bool.isRequired,
 };
 
 export default Button;

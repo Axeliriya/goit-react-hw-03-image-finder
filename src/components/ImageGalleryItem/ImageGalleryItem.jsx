@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const ImageGalleryItem = ({ image, onToggleModal }) => {
   const { webformatURL, tags, largeImageURL } = image;
   return (
@@ -10,6 +12,14 @@ const ImageGalleryItem = ({ image, onToggleModal }) => {
       />
     </li>
   );
+};
+
+ImageGalleryItem.propTypes = {
+  image: PropTypes.shape({
+    webformatURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+    largeImageURL: PropTypes.string.isRequired,
+  }),
 };
 
 export default ImageGalleryItem;
